@@ -29,4 +29,5 @@ jobs:
     - run: yarn install --frozen-lockfile
     - run: git config --global user.email "${{ secrets.GIT_EMAIL }}"
     - run: git config --global user.name "${{ secrets.GIT_NAME }}"
+    - run: git remote set-url origin https://danielbollom:${{ secrets.ACCESS_TOKEN }}@github.com/danielbollom/react-embedcode .
     - run: yarn deploy
