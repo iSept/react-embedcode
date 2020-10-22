@@ -14,7 +14,6 @@ const App = () => {
     'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0'
   )
 
-  console.log(status)
   return (
     <div>
       <h1>Cognito Forms</h1>

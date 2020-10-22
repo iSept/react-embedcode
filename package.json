@@ -28,8 +28,12 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.15.5",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-standard": "^14.1.0",
@@ -41,21 +45,19 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-standard": "^4.0.1",
     "gh-pages": "^2.2.0",
+    "husky": "^4.3.0",
     "microbundle-crl": "^0.13.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1",
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "husky": "^4.3.0"
+    "react-scripts": "^3.4.1"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
+    "enzyme": "^3.11.0",
     "prop-types": "^15.7.2"
   },
   "config": {
