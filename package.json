@@ -5,6 +5,7 @@
   "author": "danielbollom",
   "license": "MIT",
   "repository": "danielbollom/react-embedcode",
+  "homepage": "https://danielbollom.github.io/react-embedcode",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -22,7 +23,8 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "audit:fix": "npx yarn-audit-fix"
   },
   "peerDependencies": {
     "react": "^16.0.0"
