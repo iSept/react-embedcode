@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { useEmbed } from 'react-embedcode'
-import 'react-embedcode/dist/index.css'
+import './index.css'
 
 const App = () => {
   const [
