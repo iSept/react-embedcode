@@ -1,5 +1,5 @@
 import React from 'react'
-import { Embed } from '.'
+import { Embed, useEmbed } from '.'
 import Enzyme, { mount } from 'enzyme'
 
 import Adapter from 'enzyme-adapter-react-16'
