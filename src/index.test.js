@@ -38,4 +38,19 @@ describe('Embed', () => {
     )
     expect(status[0]).toBe('loading')
   })
+
+  it('hook runs callback on load complete', () => {
+    const fn = jest.fn()
+    const prom = () =>
+      Promise.resolve()
+        .then(fn)
+        .then(() => expect(fn).toHaveBeenCalled())
+    mount(
+      <HookText
+        callback={() => {
+          useEmbed(null, prom)
+        }}
+      />
+    )
+  })
 })
