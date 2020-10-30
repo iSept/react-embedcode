@@ -15,4 +15,10 @@ describe('Embed', () => {
     const wrapper = mount(<Embed />)
     expect(wrapper.find(Embed).length).toBe(1)
   })
+  
+  it('renders a child mount', () => {
+    const mountElem = <div />
+    const wrapper = mount(<Embed mount={mountElem} script={null} />)
+    expect(wrapper.find('div').length).toBe(1)
+  })
 })
