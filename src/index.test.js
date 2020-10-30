@@ -4,7 +4,12 @@ import Enzyme, { mount } from 'enzyme'
 
 import Adapter from 'enzyme-adapter-react-16'
 
-Enzyme.configure({ adapter: new Adapter() })
+Enzyme.configure({ adapter: new Adapter() });
+
+const HookText = ({ callback }) => {
+  callback()
+  return null
+};
 
 describe('Embed', () => {
   it('is truthy', () => {
@@ -20,5 +25,17 @@ describe('Embed', () => {
     const mountElem = <div />
     const wrapper = mount(<Embed mount={mountElem} script={null} />)
     expect(wrapper.find('div').length).toBe(1)
+  })
+  
+  it('hook runs without crashing', () => {
+    let status = ''
+    mount(
+      <HookText
+        callback={() => {
+          status = useEmbed('https://google.com')
+        }}
+      />
+    )
+    expect(status[0]).toBe('loading')
   })
 })
